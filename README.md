@@ -1,1 +1,1 @@
-# Techtonic-Tribe-Frontend-Hackathon1
+# Techtonic-Tribe-Frontend-Hackathon
