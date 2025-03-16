@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ethiopis - Kids Learning Platform</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Ethiopis</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#dashboard">Parental Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section: Registration and Login -->
+    <section id="home">
+      <h2>Welcome to Ethiopis!</h2>
+      <div id="auth">
+        <div id="register">
+          <h3>Register</h3>
+          <form id="registerForm">
+            <label for="regName">Name:</label>
+            <input type="text" id="regName" required>
+            
+            <label for="regAge">Age:</label>
+            <input type="number" id="regAge" required>
+            
+            <label for="regAvatar">Avatar (URL):</label>
+            <input type="text" id="regAvatar" placeholder="Image URL">
+            
+            <button type="submit">Register</button>
+          </form>
+        </div>
+        <div id="login">
+          <h3>Login</h3>
+          <form id="loginForm">
+            <label for="loginName">Name:</label>
+            <input type="text" id="loginName" required>
+            
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Lessons Section -->
+    <section id="lessons">
+      <h2>Lessons</h2>
+      <!-- Lesson 1: Alphabets -->
+      <div class="lesson">
+        <h3>Amharic &amp; English Alphabets</h3>
+        <img src="placeholder.jpg" alt="Alphabets" class="lesson-img">
+        <p>Learn the alphabets in Amharic and English with interactive pronunciation.</p>
+        <button class="play-audio" data-audio="alphabet.mp3">Play Audio</button>
+      </div>
+      <!-- Lesson 2: Numbers & Colors -->
+      <div class="lesson">
+        <h3>Numbers and Colors</h3>
+        <img src="placeholder.jpg" alt="Numbers and Colors" class="lesson-img">
+        <p>Learn numbers, colors, and shapes in both Amharic and English.</p>
+        <button class="play-audio" data-audio="numbers.mp3">Play Audio</button>
+      </div>
+      <!-- Lesson 3: Culture & Traditions -->
+      <div class="lesson">
+        <h3>Ethiopian Culture &amp; Traditions</h3>
+        <img src="placeholder.jpg" alt="Ethiopian Culture" class="lesson-img">
+        <p>Discover Ethiopian history, culture, and traditions through fun stories.</p>
+        <button class="play-audio" data-audio="culture.mp3">Play Audio</button>
+      </div>
+    </section>
+    
+    <!-- Games Section -->
+    <section id="games">
+      <h2>Interactive Games</h2>
+      <div class="game">
+        <h3>Alphabet Matching Game</h3>
+        <img src="placeholder.jpg" alt="Alphabet Game" class="game-img">
+        <p>Drag and drop the letters to form the correct sequence.</p>
+        <button class="start-game" data-game="alphabet">Start Game</button>
+      </div>
+      <!-- Additional game sections can be added here -->
+    </section>
+    
+    <!-- Progress Section -->
+    <section id="progress">
+      <h2>Your Progress</h2>
+      <div id="progressDisplay">
+        <p>No progress yet. Complete lessons to earn rewards!</p>
+      </div>
+    </section>
+    
+    <!-- Parental Dashboard -->
+    <section id="dashboard">
+      <h2>Parental Dashboard</h2>
+      <div id="parentDashboard">
+        <p>Track your child’s progress, set learning goals, and manage screen time.</p>
+        <div id="childProgress">
+          <p>No data available.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ethiopis. All rights reserved.</p>
+  </footer>
+  
+  <script src="./JS/script.js"></script>
+</body>
+</html>
