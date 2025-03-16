@@ -1,111 +1,423 @@
-/* General Styles */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Home Page - Full Screen Background */
+.home {
+  background: url('../img/photo_2021-04-09_23-50-23-580x408.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Optional: Additional background image element (if needed) */
+.background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/background-placeholder.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dashboard - Full Screen Background */
+.dashboard {
+  background: url('../img/x1080.jfif') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Optional: Additional background image element (for fallback) */
+.dashboard-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.3); /* Light overlay for readability */
+  z-index: -1;
+}
+
+/* Dashboard Content */
+.dashboard-container {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Dashboard Header */
+.dashboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #2d3436;
+}
+
+/* Dashboard Sections */
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ffeaa7;
+  border: 2px dashed #fdcb6e;
+  border-radius: 4px;
+  color: #2d3436;
+}
+
+.level-selection, .child-progress, .admin-controls {
+  margin-bottom: 30px;
+}
+
+.levels, .admin-links {
+  text-align: center;
+}
+
+.levels a, .admin-links a {
+  text-decoration: none;
+  color: #fff;
+  background: #55efc4;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.levels a:hover, .admin-links a:hover {
+  background: #00b894;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+  background: #0984e3;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f0f8ff;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px; /* Space for the footer */
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+.language-toggle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  padding: 30px 20px;
+}
+
+/* Home Page Hero Section */
+.home .hero {
+  text-align: center;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.home h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.home p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.home-nav .btn {
+  text-decoration: none;
+  color: #fff;
+  background: #74b9ff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.home-nav .btn:hover {
+  background: #0984e3;
+  transform: scale(1.05);
+}
+
+/* Form Pages */
+.form-page {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #dfe6e9;
+  border-radius: 4px;
+  transition: border 0.3s ease;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #0984e3;
+}
+
+.form button.btn {
+  width: 100%;
+  padding: 12px;
+  background: #0984e3;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button.btn:hover {
+  background: #74b9ff;
+}
+
+fieldset {
+  border: 1px solid #dfe6e9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #2d3436;
+}
+
+/* Dashboard and Admin */
+.dashboard, .admin-panel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dashboard h1, .admin-panel h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.timer {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ffeaa7;
+  border: 2px dashed #fdcb6e;
+  border-radius: 4px;
+  color: #2d3436;
+}
+
+.level-selection, .child-progress, .admin-controls {
+  margin-bottom: 30px;
+}
+
+.levels, .admin-links {
+  text-align: center;
+}
+
+.levels a, .admin-links a {
+  text-decoration: none;
+  color: #fff;
+  background: #55efc4;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.levels a:hover, .admin-links a:hover {
+  background: #00b894;
+  transform: scale(1.05);
+}
+
+/* Activities Section (e.g., in Dashboard) */
+.activities {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.activities h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.activity-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.activity-btn {
+  text-decoration: none;
+  color: #fff;
+  background: #fd79a8;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.activity-btn:hover {
+  background: #e17055;
+  transform: scale(1.05);
+}
+
+/* Content Pages (Lessons, Quiz, etc.) */
+.content-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.page-nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-nav .btn {
+  text-decoration: none;
+  color: #fff;
+  background: #55efc4;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.page-nav .btn:hover,
+.page-nav .btn.active {
+  background: #00b894;
+  transform: scale(1.05);
+}
+
+.lesson-content, .quiz-section, .game-section, .story-section, .activity-section, .math-section, .science-section, .coding-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.content-img {
+  width: 80%;
+  max-width: 500px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+/* Footer - Fixed at the Bottom */
+.site-footer {
+  background: #0984e3;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2rem;
   }
-  
-  /* Header */
-  header {
-    background: #ffcc00;
-    padding: 20px;
-    text-align: center;
+  .home-nav .btn {
+    margin: 5px;
+    padding: 10px 15px;
   }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 40px;
-  }
-  
-  /* Authentication Section */
-  #auth {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-  }
-  
-  #auth div {
-    width: 45%;
-  }
-  
-  form label {
-    display: block;
-    margin: 10px 0 5px;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Lesson & Game Cards */
-  .lesson, .game {
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .lesson-img, .game-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  /* Buttons */
-  button {
-    background: #ffcc00;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background: #ffdb4d;
-  }
-  
-  /* Footer */
-  footer {
-    background: #ffcc00;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+}

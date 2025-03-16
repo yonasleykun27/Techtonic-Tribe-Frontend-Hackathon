@@ -1,0 +1,68 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: #fff;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.letter-box {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  gap: 15px;
+}
+
+.letter, .drop-target {
+  width: 70px;
+  height: 70px;
+  background-color: #ffcccb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.letter {
+  background-color: #ffeb3b;
+  color: #333;
+}
+
+.letter:hover {
+  transform: scale(1.2);
+  background-color: #ff9800;
+}
+
+.drop-target {
+  background-color: #90caf9;
+}
+
+.letter-dragging {
+  opacity: 0.5;
+}
+
+.matched {
+  background-color: #4caf50 !important;
+  color: white !important;
+  transform: scale(1.1);
+}

@@ -1,0 +1,58 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #FFCC00, #FF6699);
+    margin: 0;
+}
+
+#game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#word-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.word-box {
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.word-box:hover {
+    background-color: #ff8c00;
+}
+
+.match-image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.match-image:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Ethiopis</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <!-- <img src="images/logo-placeholder.png" alt="Ethiopis Logo" class="logo"> -->
+    <div class="language-toggle">
+      <span>EN</span> | <span>አማ</span>
+    </div>
+  </header>
+  <main class="dashboard">
+    <h1>Parent Dashboard</h1>
+    <div id="timer" class="timer">
+      Session Time Remaining: <span id="time">00:00:00</span>
+    </div>
+    
+    <!-- Level selection navigation -->
+    <section class="level-selection">
+      <h2>Select Level</h2>
+      <nav class="levels">
+        <a href="lesson_2_4.html" class="btn">Beginner (2-4)</a>
+        <a href="reading_writing.html" class="btn">Intermediate (4-7)</a>
+        <a href="advanced_math_8_10.html" class="btn">Expert (8-10)</a>
+      </nav>
+    </section>
+    
+    <!-- New Section: Game, Story, and Quiz Navigation -->
+    <section class="activities">
+      <h2>Fun Activities</h2>
+      <div class="activity-links">
+        <a href="./abstract2/wordMatch/index.html" class="activity-btn">Game 1</a>
+        <a href="./abstract2/mathG/index.html" class="activity-btn">Game 2</a>
+        <a href="./abstract2/Story1/index.html" class="activity-btn">Story 1</a>
+        <a href="./abstract2/intermidiatequize/index.html" class="activity-btn">Quiz</a>
+        <a href="./abstract2/advancedquize/index.html" class="activity-btn">Quiz 1</a>
+      </div>
+    </section>
+    
+    <!-- Child's progress display -->
+    <section class="child-progress">
+      <h2>Child's Progress</h2>
+      <p>Progress details and graphs will appear here.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 Ethiopis. All rights reserved.</p>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

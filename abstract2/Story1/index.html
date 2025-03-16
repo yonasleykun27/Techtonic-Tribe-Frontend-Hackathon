@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Kids' Corner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎉 Welcome to the Kids' Corner! 🎨</h1>
+    <nav>
+      <ul>
+        <li><a href="#book-section">📚 Storybook</a></li>
+        <li><a href="#video-section">🎥 Fable Video</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Storybook Section -->
+    <section id="book-section">
+      <h2>📖 Our Storybook</h2>
+      <div class="storybook-container">
+        <img src="image.png" alt="Storybook Cover" class="storybook-cover">
+        <div class="storybook-details">
+          <h3>Title: The Adventures of Sparkle 🦄</h3>
+          <p>Author: Jane Doe</p>
+          <p>Genre: Fantasy</p>
+          <p>Synopsis: Join Sparkle the unicorn on her magical journey through Rainbow Valley! 🌈</p>
+          <!-- When the button is clicked, it will redirect to the new page displaying the PDF -->
+          <button onclick="startReading()">Start Reading 📖</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Content Section (Amharic Story) -->
+    <section id="storybook-content">
+      <h2>የታሪኩ ገፅ</h2>
+      <div class="story-text">
+        <p>
+          በአንድ ጊዜ፣ በጫካ ውስጥ አንበሳ እና ውሻ እንደ ጓደኞች ተቀላቀሉ።  
+          አንበሳ ፍጥነት ያለው ነበረ፣ ውሻም ትዕግሥትና ፍቅር ያለው ነበረ።
+        </p>
+        <p>
+          አንበሳ ሲል፣ “ውሻ ሆይ፣ ልብህን እንዴት ትቀጥለኛለህ?  
+          እንደ እኔ ፍጥነት ብቻ ባለመሆን የሚበልጥ ፍቅርንና ትዕግሥትን ይወስዳል።”
+        </p>
+        <p>
+          ውሻም ሲል፣ “አንበሳ ሆይ፣ ሰላምና ፍቅር በሕይወታችን አስፈላጊ ናቸው።  
+          እኔ በትዕግሥትና በፍቅር የሚኖረውን ሕይወት እንደማያሳየው ተማርኩ።”
+        </p>
+        <p>
+          በዚህ ታሪክ ትሩፋት ተማሩ፤  
+          ሰዎች በፍቅርና በትዕግሥት የሚኖሩት እንደ ጓደኞቻቸው የተሻሉ ሕይወቶች ናቸው።
+        </p>
+      </div>
+    </section>
+
+    <!-- Fun Video Section -->
+    <section id="video-section">
+      <h2>🎬 Fable Video</h2>
+      <div class="video-container">
+        <video width="560" height="315" controls>
+          <source src="Teret Teret Amharic _ ተረት ተረት _ Story in Amharic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-details">
+          <h3>Video Title: Sparkle's Magical Journey 🦄</h3>
+          <p>Duration: 13:56</p>
+          <p>Description: A lazy student procrastinates until a spark ignites their hidden potential. 🎉</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kids' Corner. All rights reserved. 🧸</p>
+  </footer>
+
+  <script>
+    // JavaScript function for "Start Reading" button click
+    function startReading() {
+      window.location.href = 'storybook.html'; // Redirect to the new page where the PDF will be displayed
+    }
+  </script>
+
+</body>
+</html>

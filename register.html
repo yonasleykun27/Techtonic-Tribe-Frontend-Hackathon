@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Ethiopis</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <!-- <img src="images/logo-placeholder.png" alt="Ethiopis Logo" class="logo"> -->
+    <div class="language-toggle">
+      <span>EN</span> | <span>አማ</span>
+    </div>
+  </header>
+  <main class="form-page">
+    <h1>Parent Registration</h1>
+    <form id="registerForm" class="form">
+      <label for="parentName">Parent Full Name:</label>
+      <input type="text" id="parentName" placeholder="Enter your full name" required>
+      
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" placeholder="Enter phone number" required>
+      
+      <label for="password">Password (min 5 characters):</label>
+      <input type="password" id="password" placeholder="Enter password" minlength="5" required>
+      
+      <fieldset>
+        <legend>Child Information</legend>
+        <label for="childName">Child Full Name:</label>
+        <input type="text" id="childName" placeholder="Enter child's full name" required>
+        
+        <label for="childAge">Child Age:</label>
+        <select id="childAge" required>
+          <option value="">Select Age Group</option>
+          <option value="2-4">2-4 Years</option>
+          <option value="4-7">4-7 Years</option>
+          <option value="8-10">8-10 Years</option>
+        </select>
+      </fieldset>
+      
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 Ethiopis. All rights reserved.</p>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
